@@ -8,10 +8,12 @@ ARCH=$(uname -m | sed 's/x86_//;s/i[3-6]86/32/')
 VER=$(lsb_release -sr)
 
 if [ "${OS}" == "Ubuntu" ]; then
+  # Tested on Ubuntu 14.04 Trusty 64
   sudo apt-get update
   sudo apt-get -y upgrade
 
   # Install janus pre-reqs
+  sudo apt-get install -y git
   sudo apt-get install -y ruby-dev rake exuberant-ctags ack-grep
 
   #Install janus
