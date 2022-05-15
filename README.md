@@ -2,10 +2,21 @@
 
 <!-- toc -->
 
+- [Docker](#docker)
 - [Starship Cross-shell Prompt](#starship-cross-shell-prompt)
 - [The Fuck](#the-fuck)
 
 <!-- tocstop -->
+
+## Docker
+
+[Docker](https://www.docker.com/)
+
+1. Install
+   ```bash
+   curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/docker-install.sh | /bin/bash
+   ```
+2. Log out and back in for docker group membership to take effect.
 
 ## Starship Cross-shell Prompt
 
