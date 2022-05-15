@@ -16,7 +16,6 @@ curl --help &>/dev/null || die "curl not found. Please install it."
 # Install
 curl -fsSL https://get.docker.com -o /tmp/get-docker.sh || die "Failed to download instlal script."
 sh /tmp/get-docker.sh || die "get-docker.sh script failed."
-# (sh /tmp/get-docker.sh) || die "get-docker.sh script failed."
 
 # Post-install steps
 # See: https://docs.docker.com/engine/install/linux-postinstall/
