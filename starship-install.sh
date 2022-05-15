@@ -18,7 +18,7 @@ function starshipInstall {
         grep -qxF 'eval "$(starship init zsh)"' ~/.zshrc || echo 'eval "$(starship init zsh)"' >> ~/.zshrc
     fi
 
-    echo "Starship installed. Log out and back in."
+    echo "Starship installed. Log out and back in or: source ~/.bashrc"
 }
 
 starshipInstall
