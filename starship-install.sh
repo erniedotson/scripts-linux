@@ -11,13 +11,13 @@ function starshipInstall {
     # Update profile files
     if [ -f ~/.bashrc ]; then
         echo "Updating ~/.bashrc..."
-        grep -qxF 'eval "$(starship init bash)"' .bashrc || echo 'eval "$(starship init bash)"' >> .bashrc
+        grep -qxF 'eval "$(starship init bash)"' ~/.bashrc || echo 'eval "$(starship init bash)"' >> ~/.bashrc
     fi
     if [ -f ~/.zshrc ]; then
         echo "Updating ~/.zshrc..."
-        grep -qxF 'eval "$(starship init zsh)"' .zshrc || echo 'eval "$(starship init zsh)"' >> .zshrc
+        grep -qxF 'eval "$(starship init zsh)"' ~/.zshrc || echo 'eval "$(starship init zsh)"' >> ~/.zshrc
     fi
-    
+
     echo "Starship installed. Log out and back in."
 }
 

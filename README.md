@@ -3,9 +3,7 @@
 <!-- toc -->
 
 - [Starship Cross-shell Prompt](#starship-cross-shell-prompt)
-  * [Step 1: Install Starship](#step-1-install-starship)
-  * [Step 2: Setup your shell to use Starship](#step-2-setup-your-shell-to-use-starship)
-  * [Step 3: Configure Starship](#step-3-configure-starship)
+- [The Fuck](#the-fuck)
 
 <!-- tocstop -->
 
@@ -15,16 +13,33 @@
 
 > The minimal, blazing-fast, and infinitely customizable prompt for any shell! 
 
-### Step 1: Install Starship
+1. Install
+   ```bash
+   curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/starship-install.sh | /bin/bash
+   ```
+1. Configure your shell's startup script (NOTE, if using bash or zsh this has already been done for you):
+   ```bash
+   eval "$(starship init bash)" # Add to ~/.bashrc
+   eval "$(starship init zsh)"  # Add to ~/.zshrc
+   ```
+   For other shells look [here](https://starship.rs/guide/#step-2-setup-your-shell-to-use-starship).
+1. Store your configuration in `~/config/starship.toml`. Details [here](https://starship.rs/guide/#step-3-configure-starship).
 
-`curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/starship-install.sh | /bin/bash`
+## The Fuck
 
-Starship is now installed and `~/.bashrc` and `~/.zshrc` files have been updated.
+[The Fuck](https://github.com/nvbn/thefuck)
 
-### Step 2: Setup your shell to use Starship
+> The Fuck is a magnificent app, inspired by a @liamosaur tweet, that corrects errors in previous console commands.
 
-The script above already updated your `~/.bashrc` and `~/.zshrc` scripts. If you use a different shell refer to the instructions [here](https://starship.rs/guide/#step-2-setup-your-shell-to-use-starship).
-
-### Step 3: Configure Starship
-
-Store your configuration in `~/config/starship.toml`. Details [here](https://starship.rs/guide/#step-3-configure-starship).
+1. Install The Fuck
+    ```bash
+    curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/thefuck-install.sh | /bin/bash
+    ```
+1. Place this command in your `.bash_profile`, `.bashrc`, `.zshrc` or other startup script (NOTE, if you are using bash or zsh this is already done for you):
+    ```bash
+    eval $(thefuck --alias)
+    ```
+1. Reload the startup scripts by logging out and back in or:
+   ```bash
+   source ~/.bashrc     # or appropriate file for your shell
+   ```
