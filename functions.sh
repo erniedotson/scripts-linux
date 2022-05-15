@@ -1,3 +1,7 @@
+function die() {
+    echo "$*" 1>&2 ; exit 1;
+}
+
 function getOsType {
     unameOut="$(uname -s)"
     case "${unameOut}" in
@@ -18,3 +22,7 @@ function getOsType {
 # else
 #     ...
 # fi
+
+function getSudoCmd {
+    sudo --help &>/dev/null && echo "sudo" || echo ""
+}

@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # set -e
 
+function die() {
+    echo "$*" 1>&2 ; exit 1;
+}
+
 function getOsType {
     unameOut="$(uname -s)"
     case "${unameOut}" in
@@ -12,33 +16,40 @@ function getOsType {
     echo ${os}
 }
 
+function getSudoCmd {
+    sudo --help &>/dev/null && echo "sudo" || echo " "
+}
+
+# Dependencies: die, grep
 function thefuckInstall {
     # See: https://github.com/nvbn/thefuck#installation
+
+    sudoCmd=$(getSudoCmd)
 
     os=$(getOsType)
     if [ "$os" == "linux" ]; then
         # Only supporting apt for now...
-        sudo apt update || return 1
-        sudo apt install -y thefuck || return 1
+        ${sudoCmd} apt update || die "apt update command failed."
+        ${sudoCmd} apt install -y thefuck || die "apt install command failed."
     elif [ "$os" == "mac" ]; then
         # Untested
-        brew install thefuck || return 1
+        brew install thefuck || die "brew install command failed".
     else
-        echo "Unsupported OS"
-        return 1
+        die "Unsupported OS"
     fi
 
     # Update startup script
     if [ -f ~/.bashrc ]; then
         echo "Updating ~/.bashrc..."
-        grep -qxF 'eval $(thefuck --alias)' .bashrc || echo 'eval "eval $(thefuck --alias)' >> .bashrc
+        grep -qxF 'eval $(thefuck --alias)' ~/.bashrc || echo 'eval $(thefuck --alias)' >> ~/.bashrc
     fi
     if [ -f ~/.zshrc ]; then
         echo "Updating ~/.zshrc..."
-        grep -qxF 'eval $(thefuck --alias)' .zshrc || echo 'eval "eval $(thefuck --alias)' >> .zshrc
+        grep -qxF 'eval $(thefuck --alias)' ~/.zshrc || echo 'eval $(thefuck --alias)' >> ~/.zshrc
     fi
 
     return 0
 }
 
-thefuckInstall && echo "thefuck installed successfully." || echo "thefuck install failed."
+grep --help &>/dev/null || die "Grep not found. Please install it."
+thefuckInstall && echo "thefuck installed successfully. Open a new shell or execute: source ~/.bashrc" || echo "thefuck install failed."
