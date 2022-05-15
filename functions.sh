@@ -23,6 +23,7 @@ function getOsType {
 #     ...
 # fi
 
+# Example Usage: sudoCmd=$(getSudoCmd); echo $sudoCmd
 function getSudoCmd {
     sudo --help &>/dev/null && echo "sudo" || echo ""
 }
