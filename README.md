@@ -3,6 +3,7 @@
 <!-- toc -->
 
 - [Docker](#docker)
+- [Kubectl](#kubectl)
 - [Starship Cross-shell Prompt](#starship-cross-shell-prompt)
 - [The Fuck](#the-fuck)
 
@@ -17,6 +18,15 @@
    curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/docker-install.sh | /bin/bash
    ```
 2. Log out and back in for docker group membership to take effect.
+
+## Kubectl
+
+[kubectl](https://kubernetes.io/docs/reference/kubectl/)
+
+1. Install
+   ```bash
+   curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/kubectl-install.sh | /bin/bash
+   ```
 
 ## Starship Cross-shell Prompt
 
