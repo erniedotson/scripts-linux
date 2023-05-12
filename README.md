@@ -1,14 +1,5 @@
 # scripts-linux
 
-<!-- toc -->
-
-- [Docker](#docker)
-- [Kubectl](#kubectl)
-- [Starship Cross-shell Prompt](#starship-cross-shell-prompt)
-- [The Fuck](#the-fuck)
-
-<!-- tocstop -->
-
 ## Docker
 
 [Docker](https://www.docker.com/)
@@ -64,3 +55,15 @@
    ```bash
    source ~/.bashrc     # or appropriate file for your shell
    ```
+
+## tldr pages
+
+[tldr pages](https://tldr.sh)
+
+> Simplified and community-driven man pages
+
+1. Install tldr pages
+    ```bash
+    curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/tldr-install.sh | /bin/bash
+    ```
+
