@@ -5,7 +5,11 @@ function starshipInstall {
     # Install
     curl -sS https://starship.rs/install.sh -o /tmp/install.sh || exit 1
     chmod +x /tmp/install.sh || exit 1
-    sudo -E sh -c "/tmp/install.sh -y" || exit 1
+    if [ which sudo ]; then
+        sudo -E sh -c "/tmp/install.sh -y" || exit 1
+    else
+        sh -c "/tmp/install.sh -y" || exit 1
+    fi
     rm /tmp/install.sh
 
     # Update profile files
