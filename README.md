@@ -4,6 +4,7 @@
 
 | Application | Install command |
 | ----------- | --------------- |
+| [AWS CLI](https://docs.aws.amazon.com/cli/) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/awscli-install.sh \| /bin/bash` |
 | [Docker](https://www.docker.com/) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/docker-install.sh \| /bin/bash` |
 | [Helm](https://helm.sh/docs/intro/install/#from-script) | `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 \| bash` |
 | [k3s](https://docs.k3s.io/quick-start) | `curl -sfL https://get.k3s.io \| sh -` |

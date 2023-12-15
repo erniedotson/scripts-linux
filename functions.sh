@@ -27,3 +27,8 @@ function getOsType {
 function getSudoCmd {
     sudo --help &>/dev/null && echo "sudo" || echo ""
 }
+
+# Depends on: die
+function need {
+  which "$1" >/dev/null || die "ERROR: $1 is required but was not found. Please install it and try again."
+}
