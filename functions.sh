@@ -2,6 +2,15 @@ function die() {
     echo "$*" 1>&2 ; exit 1;
 }
 
+function elevate() {
+    if which sudo 2>&1 >/dev/null; then
+        sudo $@
+    else
+        $@
+    fi
+    return $?
+}
+
 function getOsType {
     unameOut="$(uname -s)"
     case "${unameOut}" in
