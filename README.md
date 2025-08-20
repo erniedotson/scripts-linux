@@ -12,3 +12,7 @@
 | [Starship Cross-shell Prompt](https://starship.rs/) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/starship-install.sh \| /bin/bash ` |
 | [The Fuck](https://github.com/nvbn/thefuck) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/thefuck-install.sh \| /bin/bash` |
 | [tldr pages](https://tldr.sh) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/tldr-install.sh \| /bin/bash` |
+
+## Utility scripts
+
+- **mmd2svg.sh** - Convert mermaid.js .mmd file to .svg image file
