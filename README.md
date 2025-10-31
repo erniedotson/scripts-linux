@@ -4,6 +4,7 @@
 
 | Icon | Application | Install command |
 | ---- | ----------- | --------------- |
+| <img width="32" src="https://cdn.simpleicons.org/ansible"> | [Ansible](https://www.ansible.com/) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/ansible-install.sh \| /bin/bash` |
 |      | [AWS CLI](https://docs.aws.amazon.com/cli/) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/awscli-install.sh \| /bin/bash` |
 | <img width="32" src="https://cdn.simpleicons.org/docker"> | [Docker](https://www.docker.com/) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/docker-install.sh \| /bin/bash` |
 | <img width="32" src="https://cdn.simpleicons.org/helm"> | [Helm](https://helm.sh/docs/intro/install/#from-script) | `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 \| bash` |
