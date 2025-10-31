@@ -1,0 +1,10 @@
+---
+- name: Install zellij
+  hosts: all
+  become: true
+  
+  tasks:
+
+  - name: Install zellij
+    ansible.builtin.import_role:
+      name: den_is.tools.zellij

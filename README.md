@@ -1,5 +1,12 @@
 # scripts-linux
 
+## Pre-requisites
+
+For tools that use ansible playbooks:
+
+* Install `ansible` and `ansible-galaxy`
+* Install ansible-galaxy dependencies: `cd ansible && ansible-galaxy install -r requirements.yaml`
+
 ## Install Scripts
 
 | Icon | Application | Install command |
@@ -13,7 +20,12 @@
 | <img width="32" src="https://cdn.simpleicons.org/starship"> | [Starship Cross-shell Prompt](https://starship.rs/) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/starship-install.sh \| /bin/bash ` |
 |      | [The Fuck](https://github.com/nvbn/thefuck) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/thefuck-install.sh \| /bin/bash` |
 |      | [tldr pages](https://tldr.sh) | `curl -Lks https://raw.githubusercontent.com/erniedotson/scripts-linux/master/tldr-install.sh \| /bin/bash` |
+| <img width="32" src="https://zellij.dev/img/logo.png"> | [zellij](https://zellij.dev/) | `ansible-playbook --connection=local --inventory 127.0.0.1, ansible/playbooks/zellij.yaml` |
 
 ## Utility scripts
 
 - **mmd2svg.sh** - Convert mermaid.js .mmd file to .svg image file
+
+## Resources
+
+* [den-is/ansible-collection-tools | Github](https://github.com/den-is/ansible-collection-tools) - Ansible roles for installing common utilities
